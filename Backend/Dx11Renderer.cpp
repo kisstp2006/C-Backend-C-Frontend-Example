@@ -76,14 +76,26 @@ bool Dx11Renderer::Initialize(HWND hwnd, int width, int height) {
     return InitializePipeline() && RecreateRenderTarget();
 }
 
-void Dx11Renderer::RenderFrame() {
-    if (context_ == nullptr || renderTargetView_ == nullptr || swapChain_ == nullptr) {
+void Dx11Renderer::BeginFrame() {
+    if (context_ == nullptr || renderTargetView_ == nullptr) {
         return;
     }
 
     DrawSelectedPrimitive();
     context_->OMSetRenderTargets(1, &renderTargetView_, nullptr);
     context_->ClearRenderTargetView(renderTargetView_, clearColor_);
+}
+
+void Dx11Renderer::RenderFrame() {
+    BeginFrame();
+    EndFrame();
+}
+
+void Dx11Renderer::EndFrame() {
+    if (swapChain_ == nullptr) {
+        return;
+    }
+
     swapChain_->Present(1, 0);
 }
 
@@ -117,6 +129,14 @@ bool Dx11Renderer::Resize(int width, int height) {
     }
 
     return RecreateRenderTarget();
+}
+
+ID3D11Device* Dx11Renderer::GetDevice() const {
+    return device_;
+}
+
+ID3D11DeviceContext* Dx11Renderer::GetContext() const {
+    return context_;
 }
 
 bool Dx11Renderer::RecreateRenderTarget() {

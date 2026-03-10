@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -107,16 +107,16 @@
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -143,7 +143,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -163,18 +163,18 @@
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -201,7 +201,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -221,18 +221,18 @@
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -259,7 +259,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck></BufferSecurityCheck>
@@ -280,16 +280,16 @@
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;ENGINEHOST_WITH_IMGUI=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui;C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\..\third_party\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -375,6 +375,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\EngineMain.cpp" />
     <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\Dx11Renderer.cpp" />
     <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\HostFxrBridge.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\Backend\ImGuiLayer.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\imgui.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\imgui_draw.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\imgui_tables.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="C:\Users\TI\Documents\C-Backend-C-Frontend-Example\third_party\imgui\backends\imgui_impl_dx11.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

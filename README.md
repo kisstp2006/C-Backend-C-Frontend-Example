@@ -61,3 +61,39 @@ Másik játék DLL megadásához állítsd be:
 $env:ENGINE_GAME_DLL = "C:\...\GameProjects\MyGame\bin\Debug\net10.0\MyGame.dll"
 Backend\build\Debug\EngineHost.exe
 ```
+
+## ImGui support az EngineHostban
+
+Az EngineHost támogatja a Dear ImGui overlayt (DX11 + Win32 backend).
+
+1. ImGui letöltése:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File Scripts\setup-imgui.ps1
+```
+
+2. Újrakonfigurálás és build:
+
+```powershell
+cmake -S Backend -B Backend/build
+cmake --build Backend/build --config Debug
+```
+
+3. Futtatás:
+
+```powershell
+Backend\build\Debug\EngineHost.exe
+```
+
+Ha a `third_party/imgui` mappa létezik, az ImGui automatikusan engedélyezve lesz.
+
+### Startup Project Launcher UI
+
+ImGui bekapcsolt build esetén az EngineHost induláskor egy `Project Launcher` UI panelt mutat.
+
+Itt tudsz:
+- meglévő `GameProjects/*` projektet kiválasztani és megnyitni (`Open Selected Project`),
+- új projektet generálni (`Generate New Project`),
+- fallback módban indítani game DLL nélkül (`Run Fallback (No Game DLL)`).
+
+Az `Open Selected Project` gomb futtat egy `dotnet build` lépést a kiválasztott projektre, majd a host azt tölti be.
